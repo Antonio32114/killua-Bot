@@ -36,7 +36,7 @@ let str = `
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡║
 ║➤ *Owner:* Antonio
 ║➤ *Numero:* wa.me/50763596565
-║➤ *Bot ofc:* wa.me/522281719240
+║➤ *Bot ofc:* wa.me/50763508884
 ║➤ *Fecha:* ${date}
 ║➤ *Tiempo activo:* ${uptime}
 ║➤ *Usuarios:* ${rtotalreg}
