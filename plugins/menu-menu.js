@@ -620,7 +620,7 @@ conn.sendFile(m.chat, pp, 'lp.jpg', menu, m, false, { contextInfo: { mentionedJi
 	
 } catch (e) {
 //await conn.sendButton(m.chat, `\n${wm}`, lenguajeGB['smsMalError3']() + '#report ' + usedPrefix + command, null, [[lenguajeGB.smsMensError1(), `#reporte ${lenguajeGB['smsMensError2']()} *${usedPrefix + command}*`]], m)
-console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
+console.log(`⚠️ ERROR EL MENU TIENE UN ERROR DILE A MI PROPIETARIO QUE LOS ARREGLE`)
 console.log(e)	
 }}
 handler.help = ['menu', 'help', '?']
