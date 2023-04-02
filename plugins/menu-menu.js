@@ -616,37 +616,23 @@ ${readMore}
 ┣ ඬ⃟ 👑 _${usedPrefix}delcmd *<responder a sticker/imagen con comando o texto asignado>*_
 ┗━━━━━━━━━━━━━━━━┛
 `.trim()
-let buttons = [
-//{ buttonId: '#donar', buttonText: { displayText: '📮 𝙳𝙾𝙽𝙰𝚁 📮' }, type: 1 },
-//{ buttonId: '#terminosycondiciones', buttonText: { displayText: '📋 𝚃𝙴𝚁𝙼𝙸𝙽𝙾𝚂 𝚈 𝙲𝙾𝙽𝙳𝙸𝙲𝙸𝙾𝙽𝙴𝚂 📋' }, type: 1 }]
-//{ buttonId: '#infobot', buttonText: { displayText: '🐾 𝙸𝙽𝙵𝙾𝙱𝙾𝚃 🐾' }, type: 1 }]
-let buttonMessage = {
-image: pp,
-caption: str.trim(),
-mentions: [m.sender],
-footer: `*${wm}*`,
-buttons: buttons,
-headerType: 4,
-contextInfo: {
-mentionedJid: [m.sender],
-externalAdReply: {
-showAdAttribution: true,
-mediaType: 'VIDEO',
-mediaUrl: null,
-title: '👑 ⚘݄𖠵⃕⁖𖥔͢𝐊𝐢𝐥𝐥𝐮𝐚ꪶ͢𝑩𝒐𝒕⋆᭄͙̈ 👑',
-body: null,
-thumbnail: img,
-sourceUrl: `https://chat.whatsapp.com/HZmxLIsZRbYE37xRV9XQYU`
-}}}
-conn.sendMessage(m.chat, buttonMessage, { quoted: m })
-//await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
-} catch {
-conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
+conn.sendFile(m.chat, pp, 'lp.jpg', menu, m, false, { contextInfo: { mentionedJid }})
+	
+} catch (e) {
+//await conn.sendButton(m.chat, `\n${wm}`, lenguajeGB['smsMalError3']() + '#report ' + usedPrefix + command, null, [[lenguajeGB.smsMensError1(), `#reporte ${lenguajeGB['smsMensError2']()} *${usedPrefix + command}*`]], m)
+console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
+console.log(e)	
 }}
-handler.command = /^(menu|menú|memu|memú|help|info|comandos|allmenu|2help|menu1.2|ayuda|commands|commandos|cmd)$/i
+handler.help = ['menu', 'help', '?']
+handler.tags = ['main']
+handler.command = /^(menu|menú|menucompleto|allmenu|allm\?)$/i
+//handler.register = true
 handler.exp = 50
 handler.fail = null
 export default handler
+
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
 function clockString(ms) {
 let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
 let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
