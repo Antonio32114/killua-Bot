@@ -2,7 +2,7 @@
     "name": "Killua-Bot-MD",
     "version": "1.0.0",
     "description": "Subs. al canal de YT killua-Bot",
-        "main": "index.js",
+          "main": "index.js",
     "type": "module",
     "directories": {
         "lib": "lib",
@@ -14,26 +14,25 @@
         "test": "node test.js",
         "test2": "nodemon index.js"
     },
-    "homepage": "https://github.com/Antonio32114/killua-Bot",
+    "homepage": "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
     "author": {
         "name": "BrunoSobrino"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Antonio32114/killua-Bot.git"
+        "url": "git+https://github.com/BrunoSobrino/TheMystic-Bot-MD.git"
     },
     "bugs": {
-        "url": "https://github.com/Antonio32114/killua-Bot/issues"
+        "url": "https://github.com/BrunoSobrino/TheMystic-Bot-MD/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
-        "@adiwajshing/baileys": "5.0.0",
+        "@adiwajshing/baileys": "4.4.0",
         "@bochilteam/scraper": "^3.0.0",
         "@vitalets/google-translate-api": "^8.0.0",
         "@shineiichijo/marika": "^2.0.6",
         "acrcloud": "^1.4.0",
         "api-dylux": "^1.2.2",
-        "aptoide-scraper": "^1.0.1",
         "awesome-phonenumber": "^2.68.0",
         "axios": "^0.24.0",
         "cfonts": "^2.10.0",
@@ -50,7 +49,7 @@
         "human-readable": "^0.2.1",
         "instagram-url-direct": "^1.0.12",
         "jsdom": "^19.0.0",
-        "link-preview-js": "^3.0.0",
+        "link-preview-js": "^2.1.13",
         "lodash": "^4.17.21",
         "lowdb": "^3.0.0",
         "moment-timezone": "^0.5.34",
@@ -74,6 +73,6 @@
         "wa-sticker-formatter": "^4.3.2",
         "yargs": "^17.3.1",
         "yt-search": "^2.10.3",
-        "ytdl-core": "^4.11.3"
+        "ytdl-core": "^4.11.2"
     }
 }
